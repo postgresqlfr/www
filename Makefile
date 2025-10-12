@@ -1,6 +1,6 @@
 
 PGDOCS_DIR=pgdocs_fr
-PGDOCS_TAG?=tv923
+PGDOCS_TAG?=master
 PGDOCS_URL?=https://github.com/gleu/pgdocs_fr.git
 
 ##
