@@ -30,7 +30,7 @@ docs: $(MD_FILES)
 
 src/docs/%.md: $(PGDOCS_DIR)/postgresql/%.xml
 	@mkdir -p $(dir $@)
-	pandoc -f docbook -t markdown --standalone $^ > $@ 
+	-pandoc -f docbook -t markdown --standalone $^ > $@ 
 #	xsltproc -stringparam profile.condition html --xinclude $(SGML2_STYLESHEET) $^ > $@
 
 www/docs/%.md: $(PGDOCS_DIR)/postgresql/%.xml
