@@ -36,10 +36,22 @@ src/docs/%.md: $(PGDOCS_DIR)/postgresql/%.xml
 www/docs/%.md: $(PGDOCS_DIR)/postgresql/%.xml
 	xsltproc $(SGML2_STYLESHEET) $^ > $@
 
+
+##
+## Site
+## 
+
+.PHONY: site
+site: 
+	uvx zensical build
+
+serve:
+	uvx zensical serve
+
 ##
 ## Nettoyage
 ##
 
 
 clean:
-	rm -fr $(PGDOCS_DIR)
+	rm -fr $(PGDOCS_DIR) site
